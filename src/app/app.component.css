@@ -1,0 +1,13 @@
+p {
+  font-family: Lato;
+}
+
+.side-menu{
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+}
+
+.main-block{
+  padding: 30px 40px;
+}

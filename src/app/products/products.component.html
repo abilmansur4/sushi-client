@@ -1,0 +1,83 @@
+<ngb-tabset [justify]="currentJustify" >
+  <ngb-tab title="Найти">
+    <ng-template ngbTabContent>
+      <br>
+      <p>Найти продукт по id</p>
+
+      <input #productId (keyup.enter)="onSubmitGetProductById(productId.value)" type="text" class="form-control" placeholder="Введите ID продукта" style="width:60%">
+      <br>
+      <button (click)="onSubmitGetProductById(productId.value)" type="button" class="btn btn-primary">Найти</button>
+      <br><br>
+      <p>Название: {{product?.productName}}</p>
+      <p>Категория: {{product?.productCategory}}</p>
+      <p>Описание: {{product?.productDescription}}</p>
+      <p>Цена: {{product?.productPrice}}</p>
+
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Добавить">
+    <ng-template ngbTabContent>
+      <br>
+      <p>Название</p>
+      <input #productName type="text" class="form-control" placeholder="Введите название продукта" style="width:60%">
+      <br>
+      <p>Категория</p>
+      <input #productCategory type="text" class="form-control" placeholder="Введите категорию продукта" style="width:60%">
+      <br>
+      <p>Цена</p>
+      <input #productPrice type="text" class="form-control" placeholder="Введите цену продукта" style="width:60%">
+      <br>
+      <p>Вес</p>
+      <input #productWeight type="text" class="form-control" placeholder="Введите вес продукта" style="width:60%">
+      <br>
+      <p>Количество</p>
+      <input #productAmount type="text" class="form-control" placeholder="Введите количество продукта" style="width:60%">
+      <br>
+      <p>Описание</p>
+      <input #productDescription type="text" class="form-control" placeholder="Введите описание продукта" style="width:60%">
+      <br>
+      <button (click)="onSubmitAddProduct(productName.value, productCategory.value, productPrice.value, productWeight.value, productAmount.value, productDescription.value)" type="button" class="btn btn-success">Добавить</button>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Редактировать">
+    <ng-template ngbTabContent>
+      <br>
+      <b>Введите ID продукта, который вы хотите изменить</b><br><br>
+      <div class="koko" style="display: flex; flex-direction: row;">
+        <input type="text" class="form-control" placeholder="Введите ID продукта" style="width:60%">
+        <button type="button" class="btn btn-primary" style="margin-left: 10px;">Найти</button>
+      </div>
+      <br><br>
+      <p>Название</p>
+      <input type="text" class="form-control" placeholder="Введите название продукта" style="width:60%">
+      <br>
+      <p>Категория</p>
+      <input type="text" class="form-control" placeholder="Введите категорию продукта" style="width:60%">
+      <br>
+      <p>Цена</p>
+      <input type="text" class="form-control" placeholder="Введите цену продукта" style="width:60%">
+      <br>
+      <p>Вес</p>
+      <input type="text" class="form-control" placeholder="Введите вес продукта" style="width:60%">
+      <br>
+      <p>Количество</p>
+      <input type="text" class="form-control" placeholder="Введите количество продукта" style="width:60%">
+      <br>
+      <p>Описание</p>
+      <input type="text" class="form-control" placeholder="Введите описание продукта" style="width:60%">
+      <br>
+      <button type="button" class="btn btn-success">Сохранить</button>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="Удалить">
+    <ng-template ngbTabContent>
+      <br>
+      <p>Удалить продукт по ID</p>
+      <input #productId type="text" class="form-control" placeholder="Введите ID продукта" style="width:60%">
+      <br>
+      <button (click)="onSubmitDeleteProductById(productId.value)" type="button" class="btn btn-danger">Удалить</button>
+      <br>
+      <pre style="color: green" [ngStyle]="{'display': display2}">Удалено</pre>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
