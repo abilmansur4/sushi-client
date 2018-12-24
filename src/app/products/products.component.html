@@ -44,29 +44,29 @@
       <br>
       <b>Введите ID продукта, который вы хотите изменить</b><br><br>
       <div class="koko" style="display: flex; flex-direction: row;">
-        <input type="text" class="form-control" placeholder="Введите ID продукта" style="width:60%">
-        <button type="button" class="btn btn-primary" style="margin-left: 10px;">Найти</button>
+        <input #productId type="text" class="form-control" placeholder="Введите ID продукта" style="width:60%">
+        <button type="button" class="btn btn-primary" (click)="onSubmitGetProductById2(productId.value)" style="margin-left: 10px;">Найти</button>
       </div>
       <br><br>
       <p>Название</p>
-      <input type="text" class="form-control" placeholder="Введите название продукта" style="width:60%">
+      <input #productName type="text" class="form-control" placeholder="Введите название продукта" style="width:60%" value="{{product2?.productName}}">
       <br>
       <p>Категория</p>
-      <input type="text" class="form-control" placeholder="Введите категорию продукта" style="width:60%">
+      <input #productCategory type="text" class="form-control" placeholder="Введите категорию продукта" style="width:60%" value="{{product2?.productCategory}}">
       <br>
       <p>Цена</p>
-      <input type="text" class="form-control" placeholder="Введите цену продукта" style="width:60%">
+      <input #productPrice type="text" class="form-control" placeholder="Введите цену продукта" style="width:60%" value="{{product2?.productPrice}}">
       <br>
       <p>Вес</p>
-      <input type="text" class="form-control" placeholder="Введите вес продукта" style="width:60%">
+      <input #productWeight type="text" class="form-control" placeholder="Введите вес продукта" style="width:60%" value="{{product2?.productWeight}}">
       <br>
       <p>Количество</p>
-      <input type="text" class="form-control" placeholder="Введите количество продукта" style="width:60%">
+      <input #productAmount type="text" class="form-control" placeholder="Введите количество продукта" style="width:60%" value="{{product2?.productAmount}}">
       <br>
       <p>Описание</p>
-      <input type="text" class="form-control" placeholder="Введите описание продукта" style="width:60%">
+      <input #productDescription type="text" class="form-control" placeholder="Введите описание продукта" style="width:60%" value="{{product2?.productDescription}}">
       <br>
-      <button type="button" class="btn btn-success">Сохранить</button>
+      <button type="button" class="btn btn-success" (click)="onSubmitUpdateProductById(productId.value, productName.value, productCategory.value, productPrice.value, productWeight.value, productAmount.value, productDescription.value)">Сохранить</button>
     </ng-template>
   </ngb-tab>
   <ngb-tab title="Удалить">

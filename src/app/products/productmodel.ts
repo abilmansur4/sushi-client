@@ -1,11 +1,11 @@
 export class ProductModel{
 
-  public name?: string;
-  public category?: string;
-  public price?: string;
-  public amount?: string;
-  public weight?: string;
-  public description?: string;
+  public productName?: string;
+  public productCategory?: string;
+  public productPrice?: string;
+  public productWeight?: string;
+  public productAmount?: string;
+  public productDescription?: string;
 
   constructor() {}
 }

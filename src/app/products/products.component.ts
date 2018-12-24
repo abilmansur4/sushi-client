@@ -20,11 +20,30 @@ export class ProductsComponent {
   productDetails = new ProductModel();
   currentJustify = 'justified';
   product: any;
+  product2: any;
 
   onSubmitGetProductById(prodId) {
     this.productsService.getProductById(prodId).subscribe((res) => {
       this.product = res;
     });
+  }
+
+  onSubmitGetProductById2(prodId) {
+    this.productsService.getProductById(prodId).subscribe((res) => {
+      this.product2 = res;
+    });
+  }
+
+  onSubmitUpdateProductById(productId, productName, productCategory, productPrice, productWeight, productAmount, productDescription){
+    this.productDetails.productName = productName;
+    this.productDetails.productCategory = productCategory;
+    this.productDetails.productPrice = productPrice;
+    this.productDetails.productWeight = productWeight;
+    this.productDetails.productAmount = productAmount;
+    this.productDetails.productDescription = productDescription;
+    this.productsService.updateProduct(productId, this.productDetails).subscribe(
+      res => {}
+    );
   }
 
   onSubmitDeleteProductById(prodId){
@@ -35,31 +54,23 @@ export class ProductsComponent {
 
   }
 
+
+
   display2: string = 'none';
 
 
 
   onSubmitAddProduct(productName, productCategory, productPrice, productWeight, productAmount, productDescription){
-    // this.productDetails.name = productName;
-    // this.productDetails.category = productCategory;
-    // this.productDetails.price = productPrice;
-    // this.productDetails.weight = productWeight;
-    // this.productDetails.amount = productAmount;
-    // this.productDetails.description = productDescription;
-    // this.productsService.addProduct(this.productDetails).subscribe(
-    //   res => {}
-    // );
-    // this.prodObj = {
-    //   "productName" : productName,
-    //   "productCategory" : productCategory,
-    //   "productPrice" : productPrice,
-    //   "productWeight" : productWeight,
-    //   "productAmount" : productAmount,
-    //   "productDescription" : productDescription
-    // };
-    // this.productsService.addProduct(this.prodObj).subscribe(
-    //   res => {}
-    // )
+    this.productDetails.productName = productName;
+    this.productDetails.productCategory = productCategory;
+    this.productDetails.productPrice = productPrice;
+    this.productDetails.productWeight = productWeight;
+    this.productDetails.productAmount = productAmount;
+    this.productDetails.productDescription = productDescription;
+    this.productsService.addProduct(this.productDetails).subscribe(
+      res => {}
+    );
+
 
   }
 
