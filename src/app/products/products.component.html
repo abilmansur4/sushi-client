@@ -49,24 +49,24 @@
       </div>
       <br><br>
       <p>Название</p>
-      <input #productName type="text" class="form-control" placeholder="Введите название продукта" style="width:60%" value="{{product2?.productName}}">
+      <input #productName1 type="text" class="form-control" placeholder="Введите название продукта" style="width:60%" value="{{product2?.productName}}">
       <br>
       <p>Категория</p>
-      <input #productCategory type="text" class="form-control" placeholder="Введите категорию продукта" style="width:60%" value="{{product2?.productCategory}}">
+      <input #productCategory1 type="text" class="form-control" placeholder="Введите категорию продукта" style="width:60%" value="{{product2?.productCategory}}">
       <br>
       <p>Цена</p>
-      <input #productPrice type="text" class="form-control" placeholder="Введите цену продукта" style="width:60%" value="{{product2?.productPrice}}">
+      <input #productPrice1 type="text" class="form-control" placeholder="Введите цену продукта" style="width:60%" value="{{product2?.productPrice}}">
       <br>
       <p>Вес</p>
-      <input #productWeight type="text" class="form-control" placeholder="Введите вес продукта" style="width:60%" value="{{product2?.productWeight}}">
+      <input #productWeight1 type="text" class="form-control" placeholder="Введите вес продукта" style="width:60%" value="{{product2?.productWeight}}">
       <br>
       <p>Количество</p>
-      <input #productAmount type="text" class="form-control" placeholder="Введите количество продукта" style="width:60%" value="{{product2?.productAmount}}">
+      <input #productAmount1 type="text" class="form-control" placeholder="Введите количество продукта" style="width:60%" value="{{product2?.productAmount}}">
       <br>
       <p>Описание</p>
-      <input #productDescription type="text" class="form-control" placeholder="Введите описание продукта" style="width:60%" value="{{product2?.productDescription}}">
+      <input #productDescription1 type="text" class="form-control" placeholder="Введите описание продукта" style="width:60%" value="{{product2?.productDescription}}">
       <br>
-      <button type="button" class="btn btn-success" (click)="onSubmitUpdateProductById(productId.value, productName.value, productCategory.value, productPrice.value, productWeight.value, productAmount.value, productDescription.value)">Сохранить</button>
+      <button type="button" class="btn btn-success" (click)="onSubmitUpdateProductById(productId.value, productName1.value, productCategory1.value, productPrice1.value, productWeight1.value, productAmount1.value, productDescription1.value)">Сохранить</button>
     </ng-template>
   </ngb-tab>
   <ngb-tab title="Удалить">
